@@ -1,34 +1,62 @@
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Portfolio Prototype</title>
+	<meta charset = 'UTF-8'/>
 	<link rel = "stylesheet" href = 'css/master.css' type = 'text/css'/>
 	<script type = 'text/javascript' src = 'js/holder.js'></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type = 'text/javascript'>
+
+		//on hover of work tile, expand 10% and add a shadow on the right side with 3px margins
+		$(document).ready(function(){
+			console.log('DOM loaded!');
+			var viewH = $(window).height();
+			var viewW = $(window).width();
+			//console.log(viewH);
+			//console.log(viewW);
+
+			//get viewport dimensions and assign them to each .showWork class
+			//build src string
+			var holderSrc = 'holder.js/' + viewW + 'x' + viewH;
+			$('.showWork').attr('src', holderSrc);
+
+			$(window).resize(function(){
+				$('.showWork').attr('src', holderSrc);
+				viewH = $(window).height();
+				viewW = $(window).width();
+			});
+
+		/* END DOCUMENT READY */
+		});
+	</script>
+
 </head>
 <body>
 
-	<img src = 'holder.js/1200x800' style = 'position: relative;'>
+	<img src = 'holder.js/1200x800' class = 'showWork' style = 'position: relative;'>
 	<hr>
-	<img src = 'holder.js/1200x800' style = 'text-align:center;'>
+	<img src = 'holder.js/1200x800' class = 'showWork' style = 'text-align:center;'>
 
-	<div id = 'workHolder' style = 'width: 200%; position: relative; top: -40em; overflow:auto;'>
-		<img src = 'holder.js/450x450/sky' class = 'showWork' style = 'text-align:center; position: relative;'>
+	<div id = 'workHolder'>
+		<img src = 'holder.js/450x450/sky' class = 'showWork' style = 'position: relative;'>
 		<img src = 'holder.js/450x450/sky' class = 'showWork' style = 'position:relative;'>
 		<img src = 'holder.js/450x450/lava' class = 'showWork' style = 'position:relative;'>
 	</div>
 
 	<hr>
-	<img src = 'holder.js/300x200/text:Project Title'>
+	<img src = 'holder.js/400x300/text:Project Title'>
+	<img src = 'holder.js/250x250/text:Project synopsis'>
+
+	<hr>
+	<img class = 'showWork' style = 'position: relative;'>
+
+	<hr>
+	<img class = 'showWork'>
 
 
 
 
 </body>
-
-<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js">
-	
-	//on hover of work tile, expand 10% and add a shadow on the right side with 3px margins
-	$(.showWork)
-
-</script>
+<!-- <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
 </html>
