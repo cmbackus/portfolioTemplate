@@ -4,6 +4,7 @@
 	<title>Portfolio Prototype</title>
 	<meta charset = 'UTF-8'/>
 	<link rel = "stylesheet" href = 'css/master.css' type = 'text/css'/>
+	<link rel = 'stylesheet' href = 'css/css.css' type = 'text/css'/>
 	<link rel="stylesheet" type="text/css" href="slick-master/slick/slick.css"/>
 	<script type = 'text/javascript' src = 'js/holder.js'></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -16,6 +17,7 @@
 			var viewW = $(window).width();
 			//console.log(viewH);
 			//console.log(viewW);
+			$(body).attr('style', 'max-width:' + viewW);
 
 			//get viewport dimensions and assign them to each .showWork class
 			//build src string
@@ -42,31 +44,62 @@
 
 </head>
 <body>
-
-	<div class = 'test-carousel'>
-		<div><p>text goes here</p></div>
-		<div><p>content</p></div>
-		<div><p>content</p></div>
-		<div><p>content</p></div>
-	</div>
-	<hr>
-	<img src = 'holder.js/1200x800' class = 'showWork' style = 'text-align:center;'>
+	<img src = 'design_assets/bg.jpg' style = 'text-align:center; width: 100%; height: auto;'>
 
 	<div id = 'workHolder'>
-		<img src = 'holder.js/450x450/sky' class = 'work' style = 'position: relative;'>
-		<img src = 'holder.js/450x450/sky' class = 'work' style = 'position:relative;'>
-		<img src = 'holder.js/450x450/lava' class = 'work' style = 'position:relative;'>
+		<div class = 'tile'>
+			<div class = 'titleBar'>
+				<h2 class = 'titleHeader'>ZNATIONALS</h2>
+				<img src = 'design_assets/thumb1.jpg' class = 'work'>
+			</div>
+		</div>
+		<div class = 'title'>
+			<div class = 'titleBar'>
+				<h2 class = 'titleHeader'>text here</h2>
+				<img src = 'design_assets/thumb2.jpg' class = 'work'>
+			</div>
+		</div>
+		<div class = 'title'>
+			<div class = 'titleBar'>
+				<h2 class = 'titleHeader'>text here</h2>
+				<img src = 'design_assets/thumb3.jpg' class = 'work'>
+			</div>
+		</div>
 	</div>
 
 	<hr>
 	<img src = 'holder.js/400x300/text:Project Title'>
 	<img src = 'holder.js/250x250/text:Project synopsis'>
 
+	<!-- slide 1 -->
 	<hr>
-	<img class = 'showWork' style = 'position: relative;'>
+	<img src = 'design_assets/slide1bg.jpg' style = 'position: relative; width: 100%; height: auto;'>
 
+	<!-- slide 2 -->
 	<hr>
-	<img class = 'showWork'>
+	<img src = 'design_assets/slide2bg.jpg' style = 'position: relative; width: 100%; height: auto;'>
+
+	<!-- slide 3 -->
+	<hr>
+	<img src = 'design_assets/slide3bg.jpg' style = 'position: relative; width: 100%; height: auto;'>
+
+	<div style = 'text-align: center;'>
+		<div><h1><i>Cry, havoc, and let loose the dogs of war.</i></h1></div>
+		<picture>
+			<source media = '(min-width: 225px)' src = 'design_assets/portrait.jpg'>
+			<img src = 'design_assets/portrait.jpg' alt = 'a really cool picture'>
+		</picture>
+	</div>
+
+	<h2 style = 'text-align: center;'>LET'S GET SERIOUS - OR NOT!</h2>
+	<h4 style = 'text-align: center;'>Contact me or (if you're still not sure) check out my resume</h4>
+
+	<form action = '#' method = 'GET'>
+		Name <input type = 'text' name = 'name'><br>
+		Topic <input type = 'text' name = 'topic'><br>
+		Message <textarea name = 'message' cols = '50' rows = '5'></textarea><br>
+		<input type = 'submit' value = 'Send it!'>
+	</form>
 
 
 

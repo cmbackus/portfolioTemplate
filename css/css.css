@@ -1,0 +1,37 @@
+.work
+{
+	position: relative;
+	width: 100%;
+	height: auto;
+}
+
+#workHolder .title
+{
+	padding: 8px;
+	color: #f0f0f0;
+}
+
+.titleBar
+{
+	height: 400px;
+	width: 400px;
+}
+
+.titleHeader
+{
+	font-size: 16pt;
+	text-align: center;
+	background-color: #3534b2;
+	position: relative;
+	top: 2.4em;
+	z-index: 10;
+	padding: 12px;
+	color: #ebebeb;
+}
+
+#workHolder
+{
+	width: 100%;
+	position: relative;
+	top: -50em;
+}
