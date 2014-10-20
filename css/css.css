@@ -5,15 +5,21 @@
 	height: auto;
 }
 
-#workHolder .title
+#workHolder .tile
 {
-	padding: 8px;
 	color: #f0f0f0;
+	width: auto;
+	max-width: inherit;
+	text-overflow: ellipsis;
+	-ms-text-overflow: ellipsis;
+	float: left;
+	padding-left: 2px;
+	padding-right: 2px;
 }
 
-.titleBar
+.tileBar
 {
-	height: 400px;
+	height: 450px;
 	width: 400px;
 }
 
@@ -32,6 +38,33 @@
 #workHolder
 {
 	width: 100%;
+	max-width: 100%;
+	overflow: hidden;
 	position: relative;
-	top: -50em;
+	top: -45em;
+	left: 1.5em;
+	overflow-x: scroll;
+}
+
+.projBtn
+{
+	position: relative;
+	top: -8em;
+	left: 0.5em;
+	z-index: 1000;
+	border-style: solid;
+	border-color: #f0f0f0;
+	padding: 12px;
+	width: 39%;
+	cursor: pointer;
+}
+
+.tileText
+{
+	z-index: 10000;
+	position: relative;
+	top: -8em;
+	left: 0.5em;
+	padding: 1px;
+	width: 90%;
 }
