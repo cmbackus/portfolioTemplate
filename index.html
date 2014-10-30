@@ -5,10 +5,17 @@
 	<meta charset = 'UTF-8'/>
 	<link rel = "stylesheet" href = 'css/master.css' type = 'text/css'/>
 	<link rel = 'stylesheet' href = 'css/css.css' type = 'text/css'/>
+	<link rel="stylesheet" href="./css/jquery.carousel.fullscreen.css" />
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/carouselStyle.css">
 	<link rel="stylesheet" type="text/css" href="slick-master/slick/slick.css"/>
 	<script type = 'text/javascript' src = 'js/holder.js'></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="./js/jquery.carousel.fullscreen.js"></script>
+	
 	<script type = 'text/javascript'>
+	
 
 		//on hover of work tile, expand 10% and add a shadow on the right side with 3px margins
 		$(document).ready(function(){
@@ -17,7 +24,7 @@
 			var viewW = $(window).width();
 			//console.log(viewH);
 			//console.log(viewW);
-			$(body).attr('style', 'max-width:' + viewW);
+			$('body').attr('style', 'max-width:' + viewW);
 
 			//get viewport dimensions and assign them to each .showWork class
 			//build src string
@@ -33,6 +40,18 @@
 				$('.showWork').attr('src', holderSrc);
 			});
 
+			$('a[href^="#"]').on('click',function (e) {
+		    	e.preventDefault();
+		    	console.log('clicked');
+
+		    	var target = this.hash;
+		    	$target = $(target);
+
+		    	$('html, body').stop().animate({
+		        	'scrollTop': $target.offset().top
+		    	}, 900, 'swing');
+			});
+
 
 			/*INITIALIZE SLICK */
 
@@ -44,64 +63,186 @@
 
 </head>
 <body>
-	<img src = 'design_assets/bg.jpg' style = 'text-align:center; width: 100%; height: auto;'>
 
-	<div id = 'workHolder'>
-		<div class = 'tile'>
-			<div class = 'tileBar'>
-				<h2 class = 'titleHeader'>ZNATIONALS</h2>
-				<img src = 'design_assets/thumb1.jpg' class = 'work'>
-				<div class = 'tileText'>ZNationals is a project that is related to cars. We love cars. A lot. We would marry one if we could.</div>
-				<div class = 'projBtn'>VIEW PROJECT</div>
+<!-- NAV -->
+	<div id="nav-container">
+		<div id="logo"></div>
+		<ul>
+			<li><a id = 'workLink' href="#projectCarousel">WORK</a></li>
+			<li id = 'aboutLink'><a href = '#about'>ABOUT</a></li>
+			<li><a id = 'contactLink' href="#contact">CONTACT</a></li>
+			<li><a id = 'resumeLink' href="#contact">RESUME</a></li>
+		</ul>
+	</div>
+<!----End NAV--->
+<!----Top Slider----->
+	
+<!---End Top Slider---->
+
+	
+	<div id="projectCarousel" class="carousel slide" data-ride="carousel">
+				  <ol class="carousel-indicators">
+					<li data-target="#projectCarousel" data-slide-to="0" class="active"></li>
+					<li data-target="#projectCarousel" data-slide-to="1"></li>
+					<li data-target="#projectCarousel" data-slide-to="2"></li>
+					
+				  </ol>
+				
+				  <div class="carousel-inner">
+
+				  <!-- TEMPLATE 1 -->
+					<div class="active item">
+						<div class="pageOne">
+							<h2>ZNATIONALS</h2>
+							<img  class="bg" src="media/slide1bg.jpg" alt="" />
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc posuere lorem sit amet gravida consequat. Maecenas pellentesque aliquam dignissim. Nam varius, ligula semper tempor iaculis, erat dui blandit mauris, ut laoreet dolor sem imperdiet augue. Suspendisse vel orci malesuada, eleifend diam non, auctor erat. In vitae iaculis lacus, vitae viverra ex. Nulla erat lorem, varius nec varius et, mattis vel felis. </p>
+
+							<a href="#">VIEW PROCESS</a>
+						</div>
+					</div>
+					<!-- TEMPLATE 3 -->
+					<div class="item">
+						<div class="pageThree">
+							<h2>ANDROID</h2>
+							<img class="templateImg" src='media/project1image1.jpg' >
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc posuere lorem sit amet gravida consequat. Maecenas pellentesque aliquam dignissim. </p>
+						
+							
+						</div>
+					</div>
+
+					<!-- TEMPLATE 4 -->
+					<div class="item">
+						<div class="pageFour">
+						<img class="templateImg" src='media/project1-image2.jpg' >
+							<div class="textBox">
+								<h2>Features</h2>
+								
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc posuere lorem sit amet gravida consequat. Maecenas pellentesque aliquam dignissim. </p>
+								
+								
+							</div>
+						</div>
+					</div>
+
+					
+
+
+				  </div>
+				  <!-- Carousel navigation -->
+				  <a class="carousel-control left" href="#projectCarousel" data-slide="prev">&lsaquo;</a>
+				  <a class="carousel-control right" href="#projectCarousel" data-slide="next">&rsaquo;</a>
+<!-----project 2------>
+			<div id="projectCarousel3" class="carousel slide" data-ride="carousel" >
+				  <ol class="carousel-indicators">
+					<li data-target="#projectCarousel3" data-slide-to="0" class="active"></li>
+					<li data-target="#projectCarousel3" data-slide-to="1"></li>
+				
+					
+				  </ol>
+				
+				  <div class="carousel-inner">
+
+				  <!-- TEMPLATE 2 -->
+					<div class="active item">
+						<div class="pageTwo">
+						<img  class="bg" src="media/slide2bg.jpg" alt="" />
+							<h2>EXOTICS</h2>
+
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc posuere lorem sit amet gravida consequat. Maecenas pellentesque aliquam dignissim. Nam varius, ligula semper tempor iaculis, erat dui blandit mauris, ut laoreet dolor sem imperdiet augue. Suspendisse vel orci malesuada, eleifend diam non, auctor erat. In vitae iaculis lacus, vitae viverra ex. Nulla erat lorem, varius nec varius et, mattis vel felis. </p>
+							
+							
+						</div>
+					</div>
+					 <!-- TEMPLATE 5 -->
+					<div class="item">
+						<div class="pageFive">
+							<div class="textBox">
+								<h2>Snazzy</h2>
+
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc posuere lorem sit amet gravida consequat. Maecenas pellentesque aliquam dignissim. </p>
+
+								<div class="templateImg"></div>
+							</div>
+						</div>
+					</div>
+
+				
+
+					
+
+
+				  </div>
+				  <!-- Carousel navigation -->
+				  <a class="carousel-control left" href="#projectCarousel3" data-slide="prev">&lsaquo;</a>
+				  <a class="carousel-control right" href="#projectCarousel3" data-slide="next">&rsaquo;</a>
 			</div>
+
+
+
+	
+	<!-- End project 2 -->
+	<hr>
+	
+<!-- ABOUT PAGE -->
+	<div id="about">
+		<div id="quote-box">
+			<p>This is a really awesome quote about myself and I do really cool stuff!</p>
 		</div>
-		<div class = 'tile'>
-			<div class = 'tileBar'>
-				<h2 class = 'titleHeader'>text here</h2>
-				<img src = 'design_assets/thumb2.jpg' class = 'work'>
+
+		<div id="graphic-container">
+			<div id="user-photo"></div>
+			<div class="quip-container qc-1">
+				<h2>1 BEARD</h2>
+				<div class="quip quip-1"></div>
 			</div>
-		</div>
-		<div class = 'tile'>
-			<div class = 'tileBar'>
-				<h2 class = 'titleHeader'>text here</h2>
-				<img src = 'design_assets/thumb3.jpg' class = 'work'>
+
+			<div class="quip-container qc-2">
+				<div class="quip quip-2"></div>
+				<h2>2 DOGS</h2>
 			</div>
+
+			<div class="quip-container qc-3">
+				<h2>MMM BEER</h2>
+				<div class="quip quip-3"></div>
+			</div>
+
+			<div class="quip-container qc-4">
+				<div class="quip quip-4"></div>
+				<h2>GUNS N STUFF</h2>
+			</div>
+
 		</div>
 	</div>
 
-	<hr>
-	<img src = 'holder.js/400x300/text:Project Title'>
-	<img src = 'holder.js/250x250/text:Project synopsis'>
 
-	<!-- slide 1 -->
-	<hr>
-	<img src = 'design_assets/slide1bg.jpg' style = 'position: relative; width: 100%; height: auto;'>
+<!-- CONTACT PAGE -->
+	<div id="contact">
+		<div id="header-bar">
+			<h1>LET'S GET SERIOUS - OR NOT!</h1>
+			<p>Contact me! Or if you're still not sure, check out my resume.</p>
+		</div>
 
-	<!-- slide 2 -->
-	<hr>
-	<img src = 'design_assets/slide2bg.jpg' style = 'position: relative; width: 100%; height: auto;'>
+		<div id="contact-form-container">
+			<form id="contact-form">
+				<label>NAME</label>
+				<input type="text" name="name" required="true" placeholder="Who are you?">
 
-	<!-- slide 3 -->
-	<hr>
-	<img src = 'design_assets/slide3bg.jpg' style = 'position: relative; width: 100%; height: auto;'>
+				<label>TOPIC</label>
+				<input type="text" name="topic" required="true" placeholder="What do you want to talk about?">
 
-	<div style = 'text-align: center;'>
-		<div><h1><i>Cry, havoc, and let loose the dogs of war.</i></h1></div>
-		<picture>
-			<source media = '(min-width: 225px)' src = 'design_assets/portrait.jpg'>
-			<img src = 'design_assets/portrait.jpg' alt = 'a really cool picture'>
-		</picture>
+				<label>MESSAGE</label>
+				<textarea rows="4" cols="50" name="message" form="contact-form" required="true" placeholder="Let me hear it..."></textarea>
+
+				<input type="submit" value="SEND IT!">
+			</form>
+			
+		</div>
+
+		<div id="resume-column">
+			<p>VIEW MY<br /><a href="#">RESUME</a></p>
+		</div>
 	</div>
-
-	<h2 style = 'text-align: center;'>LET'S GET SERIOUS - OR NOT!</h2>
-	<h4 style = 'text-align: center;'>Contact me or (if you're still not sure) check out my resume</h4>
-
-	<form action = '#' method = 'GET'>
-		Name <input type = 'text' name = 'name'><br>
-		Topic <input type = 'text' name = 'topic'><br>
-		Message <textarea name = 'message' cols = '50' rows = '5'></textarea><br>
-		<input type = 'submit' value = 'Send it!'>
-	</form>
 
 
 

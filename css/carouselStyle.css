@@ -1,0 +1,307 @@
+body{
+margin:0;
+padding:0;
+}
+#projectCarousel{
+	
+	margin: 0 auto;
+	clear:both;
+	overflow:crop;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+.projectPage{
+background-color: black;
+width:100%;
+
+margin-top:0px;
+}
+.projectPage img{
+width:100%;
+}
+
+
+/*pageOne styles*/
+.pageOne{
+	
+	
+	padding: 50px;
+	background-position: center; 
+	background-size:100%;
+}
+
+.pageOne h2{
+	font-size:100px;
+	padding-right:30px;
+	color:#000099;
+	text-transform: uppercase;
+	z-index: 5;
+	pointer-events:none;
+}
+
+.pageOne p{
+	font-size: 18px;
+	padding: 12px 0 18px 0;
+	color: #444;
+	letter-spacing: 1px;
+	font-weight: 300;
+	z-index: 5;
+	pointer-events:none;
+	border-top: 1px solid #fff;
+	margin: 
+}
+
+.pageOne a{
+	font-size: 16px;
+	text-decoration: none;
+	color: #fff;
+	border:1px solid #fff;
+	padding: 12px;
+	position: relative;
+	z-index: 5;
+}
+
+
+
+/*pageTwo styles*/
+.pageTwo{
+	
+	
+	padding: 50px;
+}
+
+.pageTwo #textBox{
+	position: absolute;
+	bottom: 50px;
+	padding: 0 50px 0 0;
+}
+
+.pageTwo h2{
+	font-size:100px;
+	padding-right:30px;
+	color:#ff0;
+	text-transform: uppercase;
+	z-index: 5;
+	pointer-events:none;
+}
+
+.pageTwo p{
+	font-size: 18px;
+	padding: 12px 0 18px 0;
+	color: #ddd;
+	letter-spacing: 1px;
+	font-weight: 300;
+	z-index: 5;
+	pointer-events:none;
+	border-top: 1px solid #fff;
+
+}
+
+/*pageThree styles*/
+.pageThree{
+	
+
+	padding: 50px;
+}
+
+.pageThree h2{
+	font-size:48px;
+	padding-right:30px;
+	color:#000099;
+	text-transform: uppercase;
+	z-index: 5;
+	pointer-events:none;
+	margin-right:0px;
+	width:40%;
+}
+
+.pageThree p{
+	max-width: 275px;
+	font-size: 14px;
+	padding: 12px 0 18px 0;
+	color: #444;
+	letter-spacing: 1px;
+	font-weight: 300;
+	z-index: 5;
+	pointer-events:none;
+	border-top: 1px solid #fff;
+	 
+}
+
+.pageThree img{
+	float:right;
+	width:60%;
+	padding-top:50px;
+	padding-right:50px;
+	
+	
+}
+
+/*pageFour styles*/
+.pageFour{
+	background: url('') white;
+	
+	padding: 50px;
+}
+
+.pageFour .textBox{
+	float:right;
+	clear:both;
+	
+}
+
+.pageFour h2{
+	
+	
+	font-size:48px;
+	padding-right:30px;
+	color:#000099;
+	text-transform: uppercase;
+	z-index: 5;
+	pointer-events:none;
+}
+
+.pageFour p{
+	width: 275px;
+	font-size: 14px;
+	padding: 12px 0 18px 0;
+	color: #444;
+	letter-spacing: 1px;
+	font-weight: 300;
+	z-index: 5;
+	pointer-events:none;
+	border-top: 1px solid #fff;
+	
+}
+
+.pageFour  img{
+	margin:auto;
+	width:60%;
+	padding-top:50px;
+	padding-right:50px;
+}
+
+/*pageFive styles*/
+.pageFive{
+	background: url('../media/slide2bg.jpg') black;
+	background-repeat: no-repeat;
+	
+	padding: 50px;
+}
+
+.pageFive .textBox{
+	position: absolute;
+	bottom: 50px;
+}
+
+.pageFive h2{
+	font-size:48px;
+	padding-right:30px;
+	color:#ff0;
+	text-transform: uppercase;
+	z-index: 5;
+	pointer-events:none;
+}
+
+.pageFive p{
+	width: 275px;
+	font-size: 14px;
+	padding: 12px 0 18px 0;
+	color: #ddd;
+	letter-spacing: 1px;
+	font-weight: 300;
+	z-index: 5;
+	pointer-events:none;
+	border-top: 1px solid #fff;
+	margin: 
+}
+
+.pageFive .templateImg{
+}
+
+/*pageSeven styles*/
+.pageSix{
+	background: url('') grey;
+	
+	padding: 50px;
+}
+
+.pageSix .textBox{
+	position: absolute;
+	bottom: 50px;
+	right: 50px;
+}
+
+.pageSix h2{
+	font-size:48px;
+	padding-right:30px;
+	color:#fff;
+	text-transform: uppercase;
+	z-index: 5;
+	pointer-events:none;
+}
+
+.pageSix p{
+	width: 275px;
+	font-size: 14px;
+	padding: 12px 0 18px 0;
+	color: #444;
+	letter-spacing: 1px;
+	font-weight: 300;
+	z-index: 5;
+	pointer-events:none;
+	border-top: 1px solid #fff;
+	margin: 
+}
+
+.pageSix .templateImg{
+}
+
+/*pageSeven styles*/
+.pageSeven{
+	background: url('') grey;
+	
+}
+
+.pageSeven .textBox{
+	background: rgba(0,0,0,.5);
+	width: 100%;
+	height: auto;
+	padding: 25px 50px 25px 50px;
+}
+
+.pageSeven p{	
+	font-size: 14px;
+	color: #fff;
+	letter-spacing: 1px;
+	font-weight: 300;
+	z-index: 5;
+	pointer-events:none;
+}
+
+/*pageEight styles*/
+.pageEight{
+	background: url('') grey;
+	
+}
+
+.pageEight .textBox{
+	background: rgba(0,0,0,.5);
+	width: 100%;
+	height: auto;
+	padding: 25px 50px 25px 50px;
+	position: absolute;
+	bottom: 0;
+}
+
+.pageEight p{	
+	font-size: 14px;
+	color: #fff;
+	letter-spacing: 1px;
+	font-weight: 300;
+	z-index: 5;
+	pointer-events:none;
+}

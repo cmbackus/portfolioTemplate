@@ -4,6 +4,216 @@
 	box-sizing: border-box;
 }
 
+/*  NAVIGATION STYLING */
+#nav-container{
+	width: 100%;
+	height: 50px;
+	background: rgba(0,0,0,.8);
+	position: fixed;
+	top: 0;
+	z-index: 10;
+}
+
+#logo{
+	width: 15%;
+	height: 50px;
+	background: grey;
+	float: left;
+	position: absolute;
+}
+
+#nav-container ul{
+	text-align: center;
+}
+
+#nav-container li{
+	font-size: 15px;
+	display: inline-block;
+	text-decoration: none;
+	margin: 12px 100px 0 0;
+}
+
+#nav-container a{
+	color: #fff;
+	font-weight: 300;
+}
+
+@media screen and (max-width:1000px) { 
+	#nav-container ul{text-align: right;}
+	#nav-container li{font-size: 15px; margin: 12px 50px 0 0;}
+}
+
+@media screen and (max-width:600px) { 
+	#nav-container li{font-size: 12px; margin: 16px 25px 0 0;}
+}
+
+
+/* ABOUT PAGE STYLING */
+
+#about{
+	width: 100%;
+	border-bottom:1px solid #ccc;
+	-webkit-border-bottom:1px solid #ccc;
+	-moz-border-bottom:1px solid #ccc;
+	margin-bottom: 50px;
+}
+
+#quote-box{
+	width: 100%;
+	height: 200px;
+	color: #fff;
+	font-size: 42px;
+	text-align: center;
+	font-weight: 400;
+	background: #0700ff;
+	padding: 35px 100px 0 100px;
+}
+
+#graphic-container{
+	height: 500px;
+}
+
+#user-photo{
+	width: 400px;
+	height: 400px;
+	background: url(../media/portrait.jpg);
+	background-size: 100%;
+	background-position: center -75px;
+	border: 5px solid #0700ff;
+	margin: 50px auto;
+	border-radius: 200px;
+	-webkit-border-radius: 200px;
+	-moz-border-radius: 200px;
+	position: relative;
+	z-index: 5;
+}
+
+.quip-container{
+	position: relative;
+	text-align: center;
+	margin: 0 auto;
+}
+.qc-1{top: -450px; left: -235px;}
+.qc-2{top: -425px; left: -235px;}
+.qc-3{top: -866px; left: 235px;}
+.qc-4{top: -841px; left: 235px;}
+
+.quip{
+	width: 150px;
+	height: 150px;
+	border:5px solid #0700ff;
+	border-radius: 75px;
+	-webkit-border-radius: 75px;
+	-moz-border-radius: 75px;
+	margin: 0 auto;
+		background: #0700ff;
+		background-size: 65%;
+		background-repeat: no-repeat;
+		background-position: center center;
+}
+
+.quip-1{background-image: url(../media/user-icon1.png); background-position: center 30px;}
+.quip-2{background-image: url(../media/user-icon2.png); background-position: 20px 25px;}
+.quip-3{}
+.quip-4{}
+
+@media screen and (max-width:912px) { 
+	#quote-box{font-size: 36px; padding: 45px 50px 0 50px;}
+}
+
+@media screen and (max-width:711px) { 
+	#quote-box{padding: 25px 50px 0 50px;}
+}
+
+/*  CONTACT PAGE STYLING */
+#header-bar{
+	width: 100%;
+	text-align: center;
+}
+#header-bar h1{
+	font-size: 50px;
+	margin-bottom: 0px;
+}
+#header-bar p{
+	font-size: 28px;
+	color: #7c7c7c;
+}
+
+#contact-form{
+	width: 50%;
+	height: 768px;
+	float: left;
+	margin: 0;
+	padding: 25px 25px 50px 50px;
+}
+
+#contact-form label{
+	display: block;
+	font-weight: 300;
+	margin: 15px 0 2px 0;
+}
+
+#contact-form input[type=text]{
+	width: 100%;
+	border:none;
+	background: #ddd;
+	height: 50px;
+	font-size: 18px;
+	padding: 15px;
+}
+
+#contact-form input[type=text]:focus{outline: none;}
+
+#contact-form textarea{
+	width: 100%;
+	max-width: 100%;
+	height: 200px;
+	border:none;
+	background: #ddd;
+	padding: 15px;
+	font-size: 18px;
+}
+#contact-form textarea:focus{outline: none;}
+
+#contact-form input[type=submit]{
+	width: 200px;
+	height: 45px;
+	margin: 10px 0 0 0;
+	background: #fff;
+	border:1px solid #0700ff;
+	font-size: 18px;
+	color: #0700ff;
+}
+
+#resume-column{
+	width: 50%;
+	float: left;
+	padding: 50px 50px 50px 100px;
+}
+
+#resume-column p{
+	font-size: 42px;
+	color: #aaa;
+	position: relative;
+	top: 243px;
+}
+
+#resume-column a{
+	position: relative;
+	top: -20px;
+	font-size: 80px;
+	color: #0700ff;
+	border-bottom: 1px solid #0700ff;
+}
+
+@media screen and (max-width:912px) { 
+	#header-bar h1{font-size: 40px;}
+	#header-bar p{font-size: 20px;}
+	#resume-column p{font-size: 36px;}
+	#resume-column a{font-size: 60px;}
+}
+
+
 .container 
 {
 	padding: 80px;
