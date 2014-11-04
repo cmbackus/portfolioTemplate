@@ -24,9 +24,13 @@ jQuery(document).ready(function() {
 		}
 	});
 
-	$(window).on('resize', function() {
+$(window).on('resize', function() {
 		viewH = $(window).height();
 		viewW = $(window).width();
-		$('.carousel').css({'width': viewW, 'height': $(window).height()});
+		$('.carousel').css({'margin': 0, 'width': $(window).outerWidth(), 'height': $(window).height()});
+	$('.carousel-inner').css({'margin': 0, 'width': $(window).outerWidth(), 'height': $(window).height()});
+	$('.carousel .item').css({'position': 'relative', 'width': '100%', 'height': '100%'});
+	$('.carousel .item div').css({'position': 'relative', 'width': '100%', 'height': '100%'});
+	
 	});
 }); 
