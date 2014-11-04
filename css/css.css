@@ -68,3 +68,14 @@
 	padding: 1px;
 	width: 90%;
 }
+
+#about
+{
+	text-align: center;
+}
+
+.slider autoplay div
+{
+	height: 50%;
+	width: 50%;
+}
