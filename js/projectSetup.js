@@ -2,7 +2,7 @@ $(document).ready(function(){
      init(); 
 });
 			function init(){
-				runProject();
+				//runProject();
 			}
 			
 			function runApp(){
@@ -47,3 +47,34 @@ $(document).ready(function(){
 					//$('html, body').animate({ scrollTop: 0 }, 'slow');
 				
 			}
+			function loadData(){
+			var xhr = new XMLHttpRequest();
+			xhr.onload = function(){
+				// JSON.parse() converts a string to JSON.
+ 				var myJSON = JSON.parse( xhr.responseText );
+ 				
+ 			//	var myJSON = eval('(' + xhr.responseText + ')');
+ 				var allProjects = myJSON.projects;
+				var html="";
+				for(var i=0;i<allProjects.length;i++){
+				project=allProjects[i];
+					for(var i=0;i<project.pages.length;i++){
+						html+="<div class='joke'>";
+						html +="<h3>"+page.Title+"</h3>";
+						html+="<p>"+page.Caption+"</p>"
+						html+="<p>Rating= "+page.Img+"</p>";
+						
+						html +="</div>";
+					}
+				}
+				document.querySelector('#content').innerHTML = html;
+				
+				
+			}
+			
+			var url = "../projects.json";
+			xhr.open('GET',url,true);
+			// try to prevent browser caching by sending a header to the server
+			xhr.setRequestHeader("If-Modified-Since", "Sat, 1 Jan 2010 00:00:00 GMT");
+			xhr.send();
+		}

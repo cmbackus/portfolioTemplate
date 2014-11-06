@@ -4,11 +4,16 @@
 	box-sizing: border-box;
 }
 
+body{
+	min-width: 760px;
+}
+
 a.carousel-control
 {
 	font-size: 36pt;
 	font-color: grey;
-	padding: 50% 0 0 0;
+	opacity: .3;
+	padding: 25% 0 0 0;
 }
 
 /*  NAVIGATION STYLING */
@@ -159,13 +164,14 @@ a.carousel-control
 #contact-form{
 	text-align: center;
 	width: 100%;
-	height: 768px;
-	float: left;
-	margin: 0;
+	max-width: 850px;
+	height: 550px;
+	margin: 0 auto;
 	padding: 25px 25px 50px 50px;
 }
 
 #contact-form label{
+	text-align: left;
 	display: block;
 	font-weight: 300;
 	margin: 15px 0 2px 0;
@@ -218,15 +224,18 @@ a.carousel-control
 
 #resume-column{
 	text-align: center;
-	float: left;
+	width: 600px;
+	margin: 0 auto;
 }
 
 #resume-column div{
 	font-size: 42px;
 	color: #aaa;
+	margin-right: 25px;
 }
 
 #resume-column a{
+	margin: 0 0 0 25px;
 	font-size: 80px;
 	color: #0700ff;
 }

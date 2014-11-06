@@ -19,7 +19,7 @@ jQuery(document).ready(function() {
 	$('.carousel-inner div.item img').each(function() {
 		if($(this).attr('class')=='bg'){
 		var imgSrc = $(this).attr('src');
-		$(this).parent().css({'background': 'url('+imgSrc+') center center no-repeat', '-webkit-background-size': '100% ', '-moz-background-size': '100%', '-o-background-size': '100%', 'background-size': '100%', '-webkit-background-size': 'cover', '-moz-background-size': 'cover', '-o-background-size': 'cover', 'background-size': 'cover'});
+		$(this).parent().css({'background': 'url('+imgSrc+') no-repeat', '-webkit-background-size': '100% ', '-moz-background-size': '100%', '-o-background-size': '100%', 'background-size': '100%', '-webkit-background-size': 'cover', '-moz-background-size': 'cover', '-o-background-size': 'cover', 'background-size': 'cover'});
 		$(this).remove();
 		}
 	});

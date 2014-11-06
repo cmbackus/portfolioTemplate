@@ -26,11 +26,11 @@ width:100%;
 
 /*pageOne styles*/
 .pageOne{
-	
-	
+	min-width: 760px;
+	background-image: url(../media/slide1bg.jpg);
 	padding: 50px;
-	background-position: center; 
-	background-size:100%;
+	background-position: center 100% !important; 
+	background-size:200%;
 }
 
 .pageOne h2{
@@ -45,13 +45,14 @@ width:100%;
 .pageOne p{
 	font-size: 18px;
 	padding: 12px 0 18px 0;
-	color: #444;
+	color: #fff;
+	text-shadow:0px 1px 3px rgba(0,0,0,.3);
 	letter-spacing: 1px;
 	font-weight: 300;
-	z-index: 5;
+	z-index: 35;
 	pointer-events:none;
 	border-top: 1px solid #fff;
-	margin: 
+	max-width: 800px;
 }
 
 .pageOne a{
@@ -64,19 +65,24 @@ width:100%;
 	z-index: 5;
 }
 
+@media screen and (max-width:800px) { 
+	.pageOne h2{
+		font-size: 60px;
+	}
+
+	.pageOne p{
+		font-size: 14px;
+	}
+}
+
 
 
 /*pageTwo styles*/
 .pageTwo{
-	
-	
+	min-width: 760px;
+	background-image: url(../media/slide1bg.jpg);
 	padding: 50px;
-}
-
-.pageTwo #textBox{
-	position: absolute;
-	bottom: 50px;
-	padding: 0 50px 0 0;
+	background-size:200%;
 }
 
 .pageTwo h2{
@@ -89,9 +95,11 @@ width:100%;
 }
 
 .pageTwo p{
+	max-width: 800px;
+	text-shadow: 0px 1px 8px rgba(0,0,0,.8);
 	font-size: 18px;
 	padding: 12px 0 18px 0;
-	color: #ddd;
+	color: #fff;
 	letter-spacing: 1px;
 	font-weight: 300;
 	z-index: 5;
@@ -103,12 +111,30 @@ width:100%;
 /*pageThree styles*/
 .pageThree{
 	
-
+	min-width: 1024px;
 	padding: 50px;
 }
 
+.pageThree .leftcolumn{
+	width: 25% !important;
+	margin: 0 5% 0 0;
+	padding: 50px 0 50px 0;
+	float: left;
+}
+
+.pageThree .rightcolumn{
+	width: 70% !important;
+	float: left;
+	background: url(../media/project1image1.jpg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+
+
+}
+
 .pageThree h2{
-	font-size:48px;
+	font-size:60px;
 	padding-right:30px;
 	color:#000099;
 	text-transform: uppercase;
@@ -119,86 +145,118 @@ width:100%;
 }
 
 .pageThree p{
-	max-width: 275px;
-	font-size: 14px;
+	max-width: 100%;
+	font-size: 18px;
 	padding: 12px 0 18px 0;
-	color: #444;
+	color: #666;
 	letter-spacing: 1px;
 	font-weight: 300;
 	z-index: 5;
 	pointer-events:none;
-	border-top: 1px solid #fff;
+	border-top: 1px solid #aaa;
 	 
 }
 
-.pageThree img{
-	float:right;
-	width:60%;
-	padding-top:50px;
-	padding-right:50px;
-	
-	
+
+
+@media screen and (max-width:1024px) { 
+	.pageThree h2{
+		font-size: 40px;
+	}
+
+	.pageThree .leftcolumn{
+		padding: 100px 0 100px 0;
+	}
+
+	.pageThree p{
+		font-size: 14px;
+	}
 }
 
 /*pageFour styles*/
+
+
 .pageFour{
-	background: url('') white;
 	
+	min-width: 1024px;
 	padding: 50px;
 }
 
-.pageFour .textBox{
-	float:right;
-	clear:both;
-	
+.pageFour .rightcolumn{
+	width: 25% !important;
+	margin: 0 0 0 5%;
+	padding: 50px 0 50px 0;
+	float: left;
+}
+
+.pageFour .leftcolumn{
+	width: 70% !important;
+	float: left;
+	background: url(../media/project1image1.jpg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+
+
 }
 
 .pageFour h2{
-	
-	
-	font-size:48px;
+	font-size:60px;
 	padding-right:30px;
 	color:#000099;
 	text-transform: uppercase;
 	z-index: 5;
 	pointer-events:none;
+	margin-right:0px;
+	width:40%;
 }
 
 .pageFour p{
-	width: 275px;
-	font-size: 14px;
+	max-width: 100%;
+	font-size: 18px;
 	padding: 12px 0 18px 0;
-	color: #444;
+	color: #666;
 	letter-spacing: 1px;
 	font-weight: 300;
 	z-index: 5;
 	pointer-events:none;
-	border-top: 1px solid #fff;
-	
+	border-top: 1px solid #aaa;
+	 
 }
 
-.pageFour  img{
-	margin:auto;
-	width:60%;
-	padding-top:50px;
-	padding-right:50px;
+
+
+@media screen and (max-width:1024px) { 
+	.pageFour h2{
+		font-size: 40px;
+	}
+
+	.pageFour .leftcolumn{
+		padding: 100px 0 100px 0;
+	}
+
+	.pageFour p{
+		font-size: 14px;
+	}
 }
+
 
 /*pageFive styles*/
 .pageFive{
-	background: url('../media/slide2bg.jpg') black;
+	min-width: 760px;
+	background: url('../media/project2-image1.png') black;
 	background-repeat: no-repeat;
+	background-size: cover;
 	
 	padding: 50px;
 }
 
 .pageFive .textBox{
-	position: absolute;
-	bottom: 50px;
+
 }
 
 .pageFive h2{
-	font-size:48px;
+	font-size:60px;
 	padding-right:30px;
 	color:#ff0;
 	text-transform: uppercase;
@@ -207,8 +265,8 @@ width:100%;
 }
 
 .pageFive p{
-	width: 275px;
-	font-size: 14px;
+	width: 500px;
+	font-size: 18px;
 	padding: 12px 0 18px 0;
 	color: #ddd;
 	letter-spacing: 1px;
