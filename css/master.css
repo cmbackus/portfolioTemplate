@@ -86,12 +86,14 @@ a.carousel-control
 }
 
 #graphic-container{
-	height: 500px;
+	max-height: 500px;
 }
 
 #user-photo{
 	width: 400px;
 	height: 400px;
+	max-width: 400px;
+	max-height: 400px;
 	background: url(../media/portrait.jpg);
 	background-size: 100%;
 	background-position: center -75px;
@@ -101,7 +103,6 @@ a.carousel-control
 	-webkit-border-radius: 200px;
 	-moz-border-radius: 200px;
 	position: relative;
-	z-index: 5;
 }
 
 .quip-container{
@@ -164,9 +165,15 @@ a.carousel-control
 #contact-form{
 	text-align: center;
 	width: 100%;
+<<<<<<< HEAD
 	max-width: 850px;
 	height: 550px;
 	margin: 0 auto;
+=======
+	height: auto;
+	float: left;
+	margin: 0;
+>>>>>>> FETCH_HEAD
 	padding: 25px 25px 50px 50px;
 }
 
@@ -199,6 +206,7 @@ a.carousel-control
 	background: #ddd;
 	padding: 15px;
 	font-size: 18px;
+	resize: none;
 }
 #contact-form textarea:focus{
 	order:1px solid #0700ff;
@@ -224,8 +232,11 @@ a.carousel-control
 
 #resume-column{
 	text-align: center;
+<<<<<<< HEAD
 	width: 600px;
 	margin: 0 auto;
+=======
+>>>>>>> FETCH_HEAD
 }
 
 #resume-column div{
@@ -238,6 +249,65 @@ a.carousel-control
 	margin: 0 0 0 25px;
 	font-size: 80px;
 	color: #0700ff;
+}
+
+#appendProject
+{
+	text-align: center;
+	padding: 25px 25px 50px 50px;
+	margin: 0;
+}
+
+#appendProject label
+{
+	display: block;
+	font-weight: 300;
+	margin: 15px 0 2px 0;
+}
+
+#appendProject input[type=text]
+{
+	width: 100%;
+	border:none;
+	background: #ddd;
+	height: 50px;
+	font-size: 18px;
+	padding: 15px;
+}
+
+#appendProject input[type=submit]
+{
+	width: 200px;
+	height: 45px;
+	margin: 10px 0 0 0;
+	background: #fff;
+	border:1px solid #0700ff;
+	font-size: 18px;
+	color: #0700ff;
+}
+
+#appendProject input[type=submit]:hover
+{
+	background-color:#0700ff;
+	color:#FFFFFF;
+}
+
+#appendProject textarea
+{
+	width: 100%;
+	height: 200px;
+	border:none;
+	background: #ddd;
+	padding: 15px;
+	font-size: 18px;
+	resize: none;
+}
+
+#appendProject textarea:focus
+{
+	order:1px solid #0700ff;
+	outline: none;
+	background-color:#FFFFFF;
 }
 
 @media screen and (max-width:912px) { 

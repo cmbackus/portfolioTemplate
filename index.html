@@ -33,7 +33,7 @@
 
 		//on hover of work tile, expand 10% and add a shadow on the right side with 3px margins
 		$(document).ready(function(){
-			console.log('DOM loaded!');
+			//console.log('DOM loaded!');
 			var viewH = $(window).height();
 			var viewW = $(window).width();
 			//console.log(viewH);
@@ -44,19 +44,19 @@
 			//build src string
 			var holderSrc = 'holder.js/' + viewW + 'x' + viewH;
 			$('.showWork').attr('src', holderSrc);
-			console.log(holderSrc);
+			//console.log(holderSrc);
 
 			$(window).resize(function(){
 				viewH = $(window).height();
 				viewW = $(window).width();
 				holderSrc = 'holder.js/' + viewH + 'x' + viewH;
-				console.log(holderSrc);
+				//console.log(holderSrc);
 				$('.showWork').attr('src', holderSrc);
 			});
 
 			$('a[href^="#"]').on('click',function (e) {
 		    	e.preventDefault();
-		    	console.log('clicked');
+		    	//console.log('clicked');
 
 		    	var target = this.hash;
 		    	$target = $(target);
@@ -85,7 +85,7 @@
 			<li><a id = 'workLink' href="#topSlider">WORK</a></li>
 			<li id = 'aboutLink'><a href = '#about'>ABOUT</a></li>
 			<li><a id = 'contactLink' href="#contact">CONTACT</a></li>
-			<li><a id = 'resumeLink' href="#contact">RESUME</a></li>
+			<li><a id = 'resumeLink' href="#resume-column">RESUME</a></li>
 		</ul>
 	</div>
 <!--End NAV-->
@@ -103,11 +103,8 @@
 			
 		<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 		<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.0/highlight.min.js"></script>
 		<script type="text/javascript" src="slick/slick.js"></script>
 		<script type="text/javascript" src="js/scripts.js"></script>
-
-		<script>hljs.initHighlightingOnLoad();</script>
 
 		<script type="text/javascript">
 			var disqus_shortname = 'slickcarousel';
@@ -274,9 +271,27 @@
 				<input type="submit" value="SEND IT!">
 			</form>
 
+<<<<<<< HEAD
 		<div id = 'resume-column'>
 			<div>VIEW MY<a href="#">RESUME</a></div>
 		</div>
+=======
+			<div id = 'resume-column'>
+				<div>VIEW MY<br/><a href="#">RESUME</a></div>
+			</div>
+
+			<form id = 'appendProject'>
+				<label>Add a new project!</label>
+				<input type = 'text' name = 'projName' required placeholder = 'Add Project...'>
+
+				<label>How many pages will you have?</label>
+				<input type = 'text' name = 'projPage' required placeholder = 'Pages...'>
+
+				<label>Please write a summary of this project.</label>
+				<textarea rows = '4' cols = '50' name = 'summary' form = 'appendProject' required placeholder = 'Summary time!'></textarea>
+				<input type = 'submit' value = 'submit'>
+			</form>
+>>>>>>> FETCH_HEAD
 		</div>
 	</div>
 
