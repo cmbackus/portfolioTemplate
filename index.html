@@ -13,6 +13,7 @@
 	<script src="js/jquery.js"></script>
 	<script src="js/bootstrap.min.js" type="text/javascript"></script>
 	<script src="./js/jquery.carousel.fullscreen.js"></script>
+	<script type="text/javascript" src = 'js/scrollLock.js'></script>
 	
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
@@ -36,6 +37,18 @@
 			//console.log('DOM loaded!');
 			var viewH = $(window).height();
 			var viewW = $(window).width();
+			
+		    // lock scroll position, but retain settings for later
+		    var scrollPosition = [
+		      self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
+		      self.pageYOffset || document.documentElement.scrollTop  || document.body.scrollTop
+		    ];
+		    var html = jQuery('html'); // it would make more sense to apply this to body, but IE7 won't have that
+		    html.data('scroll-position', scrollPosition);
+		    html.data('previous-overflow', html.css('overflow'));
+		    html.css('overflow', 'hidden');
+		    window.scrollTo(scrollPosition[0], scrollPosition[1]);
+
 			//console.log(viewH);
 			//console.log(viewW);
 			$('body').attr('style', 'max-width:' + viewW);
@@ -56,6 +69,13 @@
 
 			$('a[href^="#"]').on('click',function (e) {
 		    	e.preventDefault();
+
+		    	// un-lock scroll position
+    			var html = jQuery('html');
+    			var scrollPosition = html.data('scroll-position');
+    			html.css('overflow', html.data('previous-overflow'));
+    			window.scrollTo(scrollPosition[0], scrollPosition[1]);
+
 		    	//console.log('clicked');
 
 		    	var target = this.hash;
@@ -64,6 +84,17 @@
 		    	$('html, body').stop().animate({
 		        	'scrollTop': $target.offset().top
 		    	}, 900, 'swing');
+
+		    	// lock scroll position, but retain settings for later
+		    var scrollPosition = [
+		      self.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft,
+		      self.pageYOffset || document.documentElement.scrollTop  || document.body.scrollTop
+		    ];
+		    var html = jQuery('html'); // it would make more sense to apply this to body, but IE7 won't have that
+		    html.data('scroll-position', scrollPosition);
+		    html.data('previous-overflow', html.css('overflow'));
+		    html.css('overflow', 'hidden');
+		    window.scrollTo(scrollPosition[0], scrollPosition[1]);
 			});
 
 
@@ -85,12 +116,12 @@
 			<li><a id = 'workLink' href="#topSlider">WORK</a></li>
 			<li id = 'aboutLink'><a href = '#about'>ABOUT</a></li>
 			<li><a id = 'contactLink' href="#contact">CONTACT</a></li>
-			<li><a id = 'resumeLink' href="#resume-column">RESUME</a></li>
+			<li><a id = 'resumeLink' href="#resumeBtn">RESUME</a></li>
 		</ul>
 	</div>
 <!--End NAV-->
 <!--Top Slider-->
-
+<div id = 'wrapper'>
 			<div id = 'topSlider' class="content">
 				<div class="slider autoplay">
 					<div><img src="media/thumb1.jpg"/></div>
@@ -101,8 +132,6 @@
 				</div>
 			</div>
 			
-		<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-		<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 		<script type="text/javascript" src="slick/slick.js"></script>
 		<script type="text/javascript" src="js/scripts.js"></script>
 
@@ -268,7 +297,7 @@
 				<label>MESSAGE</label>
 				<textarea rows="4" cols="50" name="message" form="contact-form" required placeholder="Let me hear it..."></textarea>
 
-				<input type="submit" value="SEND IT!">
+				<input id = 'resumeBtn' type="submit" value="SEND IT!">
 			</form>
 
 <<<<<<< HEAD
@@ -294,6 +323,7 @@
 >>>>>>> FETCH_HEAD
 		</div>
 	</div>
+</div>
 
 
 

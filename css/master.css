@@ -16,6 +16,11 @@ a.carousel-control
 	padding: 25% 0 0 0;
 }
 
+#wrapper
+{
+	overflow: hidden;
+}
+
 /*  NAVIGATION STYLING */
 #nav-container{
 	width: 100%;
