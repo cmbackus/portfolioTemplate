@@ -1,0 +1,52 @@
+{
+    "Projects": [
+        {
+            "title": "ZNationals",
+            "color": "#fff",
+            "pages": [
+                {
+                    "pageStyle": 1,
+                    "Title": "Insert Title",
+                    "Caption": "Lorum ipsum shenanigans",
+                    "Img": "media/myimg.jpg"
+                },
+                {
+                    "pageStyle": 1,
+                    "Title": "Insert Title",
+                    "Caption": "Lorum ipsum shenanigans",
+                    "Img": "media/myimg.jpg"
+                },
+                {
+                    "pageStyle": 1,
+                    "Title": "Insert Title",
+                    "Caption": "Lorum ipsum shenanigans",
+                    "Img": "media/myimg.jpg"
+                }
+            ]
+        },
+        {
+            "title": "Exotics",
+            "color": "#fff",
+            "pages": [
+                {
+                    "pageStyle": 1,
+                    "Title": "Insert Title",
+                    "Caption": "Lorum ipsum shenanigans",
+                    "Img": "media/myimg.jpg"
+                },
+                {
+                    "pageStyle": 1,
+                    "Title": "Insert Title",
+                    "Caption": "Lorum ipsum shenanigans",
+                    "Img": "media/myimg.jpg"
+                },
+                {
+                    "pageStyle": 1,
+                    "Title": "Insert Title",
+                    "Caption": "Lorum ipsum shenanigans",
+                    "Img": "media/myimg.jpg"
+                }
+            ]
+        }
+    ]
+}
